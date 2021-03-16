@@ -1,9 +1,33 @@
 <template>
-    <button class="btn h-75 w-100 position-absolute"></button>
+    <button class="btn h-75 w-100 position-absolute" @click="saveKnock"></button>
 </template>
 
 <script>
-export default {}
+export default {
+    data () {
+        return {
+            time: {
+                click: Date.now()
+            }
+        }
+    },
+    methods: {
+        async saveKnock () {
+            try {
+                const response = await fetch('http://localhost:3000/clicks', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(this.time)
+                })
+                return response.json()
+            } catch (err) {
+                throw new Error('Something went wrong.')
+            }
+        }
+    }
+}
 </script>
 
 <style scoped>
