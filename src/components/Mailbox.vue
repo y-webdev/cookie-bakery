@@ -1,12 +1,23 @@
 <template>
-    <div class="mailbox h-25 bg-secondary mt-5 pt-2">
+    <div class="mailbox h-25 bg-secondary mt-5 pt-2" @click="toggleActive" :class="{ active: isActive }">
         <div class="p-2 mx-3 mt-2 bg-dark"></div>
         <p class="text-center h5 mt-2">Mailbox</p>
     </div>
 </template>
 
 <script>
-export default {}
+export default {
+    data () {
+        return {
+            isActive: false
+        }
+    },
+    methods: {
+        toggleActive () {
+            this.isActive = !this.isActive
+        }
+    }
+}
 </script>
 
 <style scoped>
