@@ -16,5 +16,7 @@ export default {
 </script>
 
 <style>
-
+.bg-dark * {
+    opacity: .9;
+}
 </style>
