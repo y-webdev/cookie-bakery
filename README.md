@@ -10,6 +10,11 @@ npm install
 npm run serve
 ```
 
+### Start bakend
+```
+json-server --watch data/db.json
+```
+
 ### Compiles and minifies for production
 ```
 npm run build
