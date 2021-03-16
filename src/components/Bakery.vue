@@ -19,12 +19,12 @@
 </template>
 
 <script>
-    import Sun from './Sun'
-    import Roof from './Roof'
-    import Plate from './Plate'
-    import Window from './Window'
-    import Door from './Door'
-    import Mailbox from './Mailbox'
+    import Sun from '@/components/Sun'
+    import Roof from '@/components/Roof'
+    import Plate from '@/components/Plate'
+    import Window from '@/components/Window'
+    import Door from '@/components/Door'
+    import Mailbox from '@/components/Mailbox'
 
     export default {
         components: {
