@@ -1,10 +1,9 @@
 <template>
-$END$
 </template>
 
 <script>
 export default {
-name: "Window.vue"
+
 }
 </script>
 
